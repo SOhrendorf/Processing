@@ -36,3 +36,7 @@ void mousePressed() {
     player = 3-player;
   }
 }
+
+void keyPressed(){
+ setup(); 
+}
