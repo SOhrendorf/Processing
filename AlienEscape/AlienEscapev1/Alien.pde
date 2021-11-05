@@ -7,6 +7,7 @@ public class Alien {
   float StartPosY;
   PImage AlienTexture;
 
+
   Alien(int pDx, int pDy, int pStartPosX, int pStartPosY) {
     //konstrucktor: Variabeln von oben mit Werten von Parametern füllen
     dx = pDx;
