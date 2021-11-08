@@ -2,6 +2,6 @@
 comment0.target=Liste
 comment1.params=
 comment1.target=void\ setup()
-comment2.params=
-comment2.target=void\ add()
+comment2.params=p
+comment2.target=void\ add(Person)
 numComments=3
