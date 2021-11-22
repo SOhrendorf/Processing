@@ -58,13 +58,10 @@ class Liste{
             System.out.print(p.name + " ");
             System.out.print(p.adresse + " ");
             System.out.print(p.kundennr + " ");
-<<<<<<< HEAD
             System.out.println(p.telefonnr + " ");
-=======
-            System.out.println(p.telefonnr);
->>>>>>> 07ab6897f86b84271557e8cd637dab7b3e3d0363
             next();
         }
+        
     }
     
     void suchenName(String pName){
