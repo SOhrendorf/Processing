@@ -1,7 +1,29 @@
+import java.util.Scanner;
 class Liste{
     Element anker;
     Element aktuell;
 
+    public Liste(){
+        menue(); 
+    }
+    
+    void menue(){
+        System.out.println("1) add Nutzer");
+        System.out.println("2) alle Benutzer anzeigen");
+        Scanner input = new Scanner(System.in);
+        int auswahl = input.nextInt();
+        
+        if(auswahl == 1){
+            System.out.println("1");
+        }else if(auswahl == 2){
+            System.out.println("2");
+        }
+        else{
+            return;
+        }
+        
+    }
+    
     void add(Person p) {
         Element e = new Element(p);
         e.next = anker;
@@ -33,10 +55,10 @@ class Liste{
         toFirst();
         while(hasAccess()){
             Person p = getContent();
-            System.out.print(p.name);
-            System.out.print(p.adresse);
-            System.out.print(p.kundennr);
-            System.out.print(p.telefonnr);
+            System.out.print(p.name + " ");
+            System.out.print(p.adresse + " ");
+            System.out.print(p.kundennr + " ");
+            System.out.println(p.telefonnr + " ");
             next();
         }
     }
