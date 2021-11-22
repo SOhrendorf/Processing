@@ -33,10 +33,10 @@ class Liste{
         toFirst();
         while(hasAccess()){
             Person p = getContent();
-            System.out.print(p.name);
-            System.out.print(p.adresse);
-            System.out.print(p.kundennr);
-            System.out.print(p.telefonnr);
+            System.out.print(p.name + " ");
+            System.out.print(p.adresse + " ");
+            System.out.print(p.kundennr + " ");
+            System.out.println(p.telefonnr);
             next();
         }
     }
