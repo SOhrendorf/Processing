@@ -51,4 +51,5 @@ class Liste{
         System.out.println("Name: " +aktuell.person.name);
         System.out.println("Adresse: " +aktuell.person.adresse);
     }
+    
 }
