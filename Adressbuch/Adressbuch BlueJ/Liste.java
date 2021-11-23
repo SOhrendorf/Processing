@@ -16,6 +16,7 @@ class Liste{
 
         if(auswahl == 1){
             System.out.println("1");
+            
         }else if(auswahl == 2){
             System.out.println("2");
         }
