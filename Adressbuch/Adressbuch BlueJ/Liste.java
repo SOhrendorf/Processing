@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//test
 class Liste{
     Element anker;
     Element aktuell;
