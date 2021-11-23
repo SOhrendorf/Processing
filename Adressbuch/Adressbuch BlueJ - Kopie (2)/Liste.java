@@ -15,19 +15,15 @@ class Liste{
         int auswahl = input.nextInt();
 
         if(auswahl == 1){
-            System.out.println("Kundennummer");
             Scanner iKdNr = new Scanner(System.in);
             int pKdNr = iKdNr.nextInt();
-            System.out.println("Telefonnummer");
             Scanner iteleNr = new Scanner(System.in);
-            String pTeleNr = iteleNr.nextLine();
-            System.out.println("Adresse");
+            String pTeleNr = iteleNr.nextString();
             Scanner iAdresse = new Scanner(System.in);
-            String pAdresse = iAdresse.nextLine();
-            System.out.println("Name");
+            String pAdresse = iAdresse.nextString();
             Scanner iName = new Scanner(System.in);
-            String pName = iName.nextLine();
-            Person pPerson = new Person(pKdNr, pTeleNr, pAdresse, pName);
+            String pName = iName.nextString();
+            Person pPerson = new Person(pKdNr, pTeleNr, pAdresse, );
             add(pPerson);
         }else if(auswahl == 2){
             System.out.println("2");

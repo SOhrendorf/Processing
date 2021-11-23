@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Liste
+comment1.params=
+comment1.target=Liste()
+comment2.params=
+comment2.target=void\ menue()
+comment3.params=p
+comment3.target=void\ add(Person)
+comment4.params=
+comment4.target=void\ toFirst()
+comment5.params=
+comment5.target=void\ next()
+comment6.params=
+comment6.target=Person\ getContent()
+comment7.params=
+comment7.target=boolean\ hasAccess()
+comment8.params=
+comment8.target=void\ alleAnzeigen()
+comment9.params=pName
+comment9.target=void\ suchenName(java.lang.String)
+numComments=10
