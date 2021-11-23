@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 class Liste{
     Element anker;
     Element aktuell;
@@ -6,13 +7,13 @@ class Liste{
     public Liste(){
         menue(); 
     }
-    
+
     void menue(){
         System.out.println("1) add Nutzer");
         System.out.println("2) alle Benutzer anzeigen");
         Scanner input = new Scanner(System.in);
         int auswahl = input.nextInt();
-        
+
         if(auswahl == 1){
             System.out.println("1");
         }else if(auswahl == 2){
@@ -21,9 +22,9 @@ class Liste{
         else{
             return;
         }
-        
+
     }
-    
+
     void add(Person p) {
         Element e = new Element(p);
         e.next = anker;
@@ -32,17 +33,15 @@ class Liste{
 
     void toFirst(){
         aktuell = anker;  
-    }
-
+     }
     void next(){
         if(hasAccess()){
             aktuell = aktuell.next;
         }
     }
-
     Person getContent(){
         return aktuell.person; 
-    }
+     }
 
     boolean hasAccess(){
         if(aktuell == null){
@@ -50,7 +49,7 @@ class Liste{
         }
         return true;
     }
-    
+
     void alleAnzeigen(){
         toFirst();
         while(hasAccess()){
@@ -61,9 +60,9 @@ class Liste{
             System.out.println(p.telefonnr + " ");
             next();
         }
-        
+
     }
-    
+
     void suchenName(String pName){
         toFirst();
         while(aktuell.person.name != pName){
@@ -74,5 +73,5 @@ class Liste{
         System.out.println("Name: " +aktuell.person.name);
         System.out.println("Adresse: " +aktuell.person.adresse);
     }
-    
+
 }

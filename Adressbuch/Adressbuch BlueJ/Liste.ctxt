@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.target=Liste
 comment1.params=
+<<<<<<< Updated upstream
 comment1.target=Liste()
 comment2.params=
 comment2.target=void\ menue()
@@ -19,3 +20,21 @@ comment8.target=void\ alleAnzeigen()
 comment9.params=pName
 comment9.target=void\ suchenName(java.lang.String)
 numComments=10
+=======
+comment1.target=void\ menue()
+comment2.params=p
+comment2.target=void\ add(Person)
+comment3.params=
+comment3.target=void\ toFirst()
+comment4.params=
+comment4.target=void\ next()
+comment5.params=
+comment5.target=Person\ getContent()
+comment6.params=
+comment6.target=boolean\ hasAccess()
+comment7.params=
+comment7.target=void\ alleAnzeigen()
+comment8.params=pName
+comment8.target=void\ suchenName(java.lang.String)
+numComments=9
+>>>>>>> Stashed changes
