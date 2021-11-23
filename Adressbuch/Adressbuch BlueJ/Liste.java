@@ -30,7 +30,7 @@ class Liste{
             Person pPerson = new Person(pKdNr, pTeleNr, pAdresse, pName);
             add(pPerson);
         }else if(auswahl == 2){
-            System.out.println("2");
+            alleAnzeigen();
         }
         else{
             return;
@@ -42,16 +42,19 @@ class Liste{
         Element e = new Element(p);
         e.next = anker;
         anker = e;
+        menue();
     }
 
     void toFirst(){
         aktuell = anker;  
      }
+     
     void next(){
         if(hasAccess()){
             aktuell = aktuell.next;
         }
     }
+    
     Person getContent(){
         return aktuell.person; 
      }
@@ -73,7 +76,7 @@ class Liste{
             System.out.println(p.telefonnr + " ");
             next();
         }
-
+        menue();
     }
 
     void suchenName(String pName){
