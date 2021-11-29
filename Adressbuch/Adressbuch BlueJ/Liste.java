@@ -1,6 +1,9 @@
+import java.util.List;
 import java.util.Scanner;
+
+import javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction;
 //test
-class Liste{
+public class Liste{
     Element anker;
     Element aktuell;
 
@@ -8,28 +11,29 @@ class Liste{
         menue(); 
     }
 
+    
+    public static void main(String[] args) {
+        Liste l = new Liste();
+    }
+    
+
     void menue(){
-        System.out.println("1) add Nutzer");
-        System.out.println("2) alle Benutzer anzeigen");
+        System.out.println("1) add Nutzer vorne");
+        System.out.println("2) add Nutzer hinten");
+        System.out.println("3) alle Benutzer anzeigen");
+        System.out.println("9) exit");
         Scanner input = new Scanner(System.in);
         int auswahl = input.nextInt();
 
         if(auswahl == 1){
-            System.out.println("Kundennummer");
-            Scanner iKdNr = new Scanner(System.in);
-            int pKdNr = iKdNr.nextInt();
-            System.out.println("Telefonnummer");
-            Scanner iteleNr = new Scanner(System.in);
-            String pTeleNr = iteleNr.nextLine();
-            System.out.println("Adresse");
-            Scanner iAdresse = new Scanner(System.in);
-            String pAdresse = iAdresse.nextLine();
-            System.out.println("Name");
-            Scanner iName = new Scanner(System.in);
-            String pName = iName.nextLine();
-            Person pPerson = new Person(pKdNr, pTeleNr, pAdresse, pName);
+            Person pPerson = new Person();
             add(pPerson);
+            
         }else if(auswahl == 2){
+            Person pPerson = new Person();
+            addBack(pPerson);
+            
+        }else if(auswahl == 3){
             alleAnzeigen();
         }
         else{
@@ -44,9 +48,29 @@ class Liste{
         anker = e;
         menue();
     }
+    
+    void addBack(Person p){
+        if(lastElement() == null){
+            add(p);
+        }
+        Element e = new Element(p);
+        Element elast = lastElement();
+        elast.next = e;
+        menue();
+    }
 
     void toFirst(){
         aktuell = anker;  
+     }
+     
+    Element lastElement(){
+        Element e = null;
+        toFirst();
+        while(hasAccess()){
+            e = aktuell;
+            next();
+        }
+        return e;
      }
      
     void next(){
@@ -56,7 +80,7 @@ class Liste{
     }
     
     Person getContent(){
-        return aktuell.person; 
+        return aktuell.person;
      }
 
     boolean hasAccess(){
